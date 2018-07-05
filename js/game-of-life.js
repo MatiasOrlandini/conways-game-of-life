@@ -37,24 +37,22 @@ var GameOfLife = {
     }
   },
   applyRule: function(board, posX, posY) {
-  var cell = board[posX][posY];
-  var count = 0;
-  if(board[posX-1] && board[posX-1][posY-1]) ++ count;
-  if(board[posX-1] && board[posX-1][posY]) ++ count;
-  if(board[posX-1] && board[posX-1][posY+1]) ++ count;
+    var cell = board[posX][posY];
+    var count = 0;
+    if(board[posX-1] && board[posX-1][posY-1]) ++ count;
+    if(board[posX-1] && board[posX-1][posY]) ++ count;
+    if(board[posX-1] && board[posX-1][posY+1]) ++ count;
 
-  if(board[posX][posY-1]) ++ count;
-  if(board[posX][posY+1]) ++ count;
+    if(board[posX][posY-1]) ++ count;
+    if(board[posX][posY+1]) ++ count;
 
-  if(board[posX+1] && board[posX+1][posY-1]) ++ count;
-  if(board[posX+1] && board[posX+1][posY]) ++ count;
-  if(board[posX+1] && board[posX+1][posY+1]) ++ count;
+    if(board[posX+1] && board[posX+1][posY-1]) ++ count;
+    if(board[posX+1] && board[posX+1][posY]) ++ count;
+    if(board[posX+1] && board[posX+1][posY+1]) ++ count;
 
-  var rule1 = !cell && count >= 3;
-  var rule2 = cell && (count === 2 || count === 3);
-  return rule1 || rule2;
-
-
+    var rule1 = !cell && count >= 3;
+    var rule2 = cell && (count === 2 || count === 3);
+    return rule1 || rule2;
 
     return true;
   }
