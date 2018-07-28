@@ -19,8 +19,8 @@ html, body {
   flex-wrap: wrap;
 }
 .board li {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   margin: 2px;
   background-color: white;
   border: 1px solid black;

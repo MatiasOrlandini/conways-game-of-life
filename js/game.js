@@ -9,6 +9,7 @@ var Game = {
   init: function() {
     Game.showGame();
     Board.createCells();
+    Board.boardDinamic();
     Game.board = Board.getBoard();
     Game.cells = Board.getCells();
     Game.next = document.getElementById('next');
