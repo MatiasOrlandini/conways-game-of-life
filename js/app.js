@@ -3,7 +3,7 @@ var play = function() {
   Board.updateCells(liAlives);
 }
 var init = function() {
-  Game.init();
-  Game.start();
+  Window.Accept();
+  Window.InputFocus();
 }
 window.onload = init;
