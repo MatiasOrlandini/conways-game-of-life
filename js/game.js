@@ -25,7 +25,7 @@ var Game = {
   },
   update: function() {
     if (Game.play.innerHTML === 'Play!') {
-      Game.interval = setInterval(Board.nextStep, 1000);
+      Game.interval = setInterval(Board.nextStep, 400);
       Game.play.innerHTML = 'Stop!';
     }else {
       clearInterval(Game.interval);
